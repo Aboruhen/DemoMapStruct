@@ -8,7 +8,9 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingInheritanceStrategy;
 import org.mapstruct.MappingTarget;
 
-@Mapper(config = ProductConfigMapper.class, mappingInheritanceStrategy = MappingInheritanceStrategy.AUTO_INHERIT_ALL_FROM_CONFIG)
+@Mapper(config = ProductConfigMapper.class,
+    componentModel = "spring",
+    mappingInheritanceStrategy = MappingInheritanceStrategy.AUTO_INHERIT_ALL_FROM_CONFIG)
 public interface ProductViewMapper {
 
     @InheritConfiguration(name = "baseMapProduct")
